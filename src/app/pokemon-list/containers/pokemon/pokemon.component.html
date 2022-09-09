@@ -1,0 +1,38 @@
+ <div class="title">
+   <img width="300" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2880px-International_Pok%C3%A9mon_logo.svg.png">
+  </div>
+
+ <div class="container">
+  <div class="row">
+    <div class="col-4" *ngFor="let item of pokeList">
+
+      <app-pokemon-card
+        [pokemon]="item"
+        (onClick)="show(item)"
+        (click)="openModalPoke('modal-poke')"
+      ></app-pokemon-card>
+
+    </div>
+  </div>
+   <div class="row text-button">
+     <button
+       class="adjust-button"
+       type="button"
+       (click)="showNextPoke()"
+     >Carregar Mais
+     </button>
+   </div>
+ </div>
+
+ <div id="modal-poke" class="modal-content">
+  <div class="modal-list">
+    <button class="close" (click)="closeModalPoke('modal-poke')">x</button>
+    <h3>pokemon selecionado
+
+      <div>
+      {{pokemon.name}}
+      </div>
+
+    </h3>
+  </div>
+</div>

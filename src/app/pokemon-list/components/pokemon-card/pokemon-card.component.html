@@ -1,0 +1,8 @@
+<div class="card" (click)="onClick.emit()">
+  <img width="150" [src]="pokemon.image">
+  <div class="row m-2 col-6 identity">
+    {{pokemon.name}}
+    #{{pokemon.id}}
+     {{pokemon.type}}
+  </div>
+</div>
