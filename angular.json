@@ -122,7 +122,6 @@
       }
     }
   },
-  "defaultProject": "pokemon-list",
   "cli": {
     "analytics": "1e1a8601-4775-48cf-ab7c-0548691e9b1d"
   }
